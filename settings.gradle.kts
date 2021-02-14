@@ -1,3 +1,3 @@
 
-rootProject.name = "numbers"
+rootProject.name = "music-land"
 

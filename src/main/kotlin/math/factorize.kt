@@ -17,6 +17,7 @@ private fun factorizeCore(number: Long): List<Long> {
 val numbers = mutableMapOf<Long, List<Long>>()
 val primes = mutableListOf<Long>()
 val composites = mutableMapOf<Long, List<Long>>()
+var largestNumberFactorized = 0L
 
 private fun Long.saveFactors(factors: List<Long>) {
     numbers[this] = factors
@@ -29,5 +30,11 @@ private fun Long.saveFactors(factors: List<Long>) {
 }
 
 fun factorize(number: Long): List<Long> {
+    if (number > largestNumberFactorized) factorizeUpTo(number)
     return numbers[number] ?: factorizeCore(number).also { number.saveFactors(it) }
+}
+
+private fun factorizeUpTo(number: Long) {
+    largestNumberFactorized = number
+    (1..number).forEach { factorize(it) }
 }

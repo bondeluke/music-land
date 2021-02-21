@@ -17,8 +17,8 @@ class Expression {
             error("The expression '${expression}' cannot be understood.")
         }
 
-        fun evaluateAsString(expression: String): String {
-            return "$expression = ${evaluate(expression)}"
+        fun evaluateToString(expression: String): String {
+            return "$expression = ${evaluate(expression).reduce()}"
         }
     }
 }

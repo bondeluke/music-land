@@ -1,6 +1,9 @@
-import math.Expression
+import math.Fraction
+import math.plus
+import math.sets.subsets
+import math.times
 
 fun main() {
-    Expression.evaluateAsString("4/5 * 7/2 + 3/2").also { println(it) }
-    Expression.evaluateAsString("4/5").also { println(it) }
+    (1..5).subsets()
+
 }

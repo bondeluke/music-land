@@ -1,11 +1,8 @@
 package math
 
 import kotlin.math.floor
+import kotlin.math.sqrt
 
-fun sqrt(number: Long): Double {
-    return kotlin.math.sqrt(number.toDouble())
-}
-
-fun sqrtFloor(number: Long): Long {
-    return floor(sqrt(number)).toLong()
+fun sqrtFloor(number: Int): Int {
+    return floor(sqrt(number.toDouble())).toInt()
 }

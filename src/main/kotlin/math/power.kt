@@ -2,6 +2,6 @@ package math
 
 import functions.repeat
 
-fun Long.power(exponent: Int): Long {
+fun Int.power(exponent: Int): Int {
     return this.repeat(exponent).reduce { product, number -> product * number }
 }

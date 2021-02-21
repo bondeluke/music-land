@@ -1,9 +1,6 @@
 package functions
 
-fun <T, R> T.print(how: (T) -> R) {
-    println(how(this).toString())
-}
-
-fun <T> T.print() {
+fun <T> T.print(): T {
     println(this.toString())
+    return this
 }

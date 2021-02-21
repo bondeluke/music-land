@@ -1,9 +1,9 @@
-import math.Fraction
-import math.plus
+import functions.print
 import math.sets.subsets
-import math.times
 
 fun main() {
-    (1..5).subsets()
+    (1..6).subsets()
+        .groupBy { it.size }
+        .map { it.print() }
 
 }

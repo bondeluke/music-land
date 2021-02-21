@@ -1,8 +1,8 @@
 package math.sets
 
 fun allBinarySequences(size: Int): List<List<Boolean>> {
-    return if (size == 1) listOf(listOf(false), listOf(true))
+    return if (size == 1) listOf(listOf(true), listOf(false))
     else allBinarySequences(size - 1).let { result ->
-        result.map { listOf(false) + it } + result.map { listOf(true) + it }
+        result.map { listOf(true) + it } + result.map { listOf(false) + it }
     }
 }
